@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Django - Index</title>
+    <title>Django - Clientes</title>
 </head>
 <body>
     <center>
@@ -13,17 +13,17 @@
     <table>
         <thead>
             <tr>
-                <th>Produto</th>
-                <th>Preço</th>
-                <th>Estoque</th>
+                <th>Nome</th>
+                <th>Endereço</th>
+                <th>Email</th>
             </tr>
         </thead>
         <tbody>
-        {% for produto in Produtos %}
+        {% for cliente in Clientes %}
             <tr>
-                <td><a ref="{% url 'produto' produto.id %}">{{ produto.nome }}</a></td>
-                <td>{{ produto.preco }}</td>
-                <td>{{ produto.estoque }}</td>
+                <td>{{ cliente.nome }}</td>
+                <td>{{ cliente.preco }}</td>
+                <td>{{ cliente.estoque }}</td>
             </tr>
         {% endfor %}
         <tbody>
