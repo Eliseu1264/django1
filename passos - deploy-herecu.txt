@@ -79,4 +79,6 @@ MIDDLEWARE = [
 => Para ver algum quando houver no deploy:
    heroku logs --tail
 
-
+--------------------------------------------------
+criou:
+    https://django1-assist.herokuapp.com/
