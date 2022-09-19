@@ -70,13 +70,13 @@ MIDDLEWARE = [
    coloca-se entre os parêntese. por Exemplo o site "https://django1-assist.heroku.com"
    ALLOWED HOSTS = ['django1-assist.heroku.com']
 ----------------------------------------------------------------------------
-=> Ao alterar o projeto:
-   atualizar o 
+=> Ao alterar o projeto. Atualizar git e heroku:
    git add .
    git commit -m "mensagem"
+
    git push heroku master
 ----------------------------------------------------------------------------
-=> Para ver algum quando houver no deploy:
+=> Para ver algum erro, quando houver, no deploy:
    heroku logs --tail
 
 --------------------------------------------------
