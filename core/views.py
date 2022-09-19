@@ -1,14 +1,17 @@
-from multiprocessing import context
 from django.shortcuts import render
 from core.models import Produtos, Clientes
 
-def f_index(request):
-    return render(request, 'index.html')
+def index(request):
+    produtos = Produtos.objects.all()
+    context = {'produtostb': produtos}
+    return render(request, 'index.html', context)
 
-def f_produto(request, pk):
-    prod = Produtos.objects.get(id=pk)
+def produto(request, pk):
+    produtos = Produtos.objects.get(id=pk)
     context = {
-        'd_produto': prod
+        'nome': produtos.nome,
+        'preco': produtos.preco,
+        'quantidade': produtos.quantidade
     }
     return render(request, 'produto.html', context)
 

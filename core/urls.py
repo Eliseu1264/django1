@@ -1,9 +1,11 @@
+from distutils import core
 from django.urls import path
-from .views import f_index, f_contato, f_produto, f_cliente
+
+from . import views
 
 urlpatterns = [
-    path('', f_index, name='index'),
-    path('contato/', f_contato, name='contato'),
-    path('produto/<int:pk>', f_produto, name='produto'),
-    path('cliente/<int:pk>', f_cliente, name='cliente'),
+    path('', views.index, name='index'),    
+    path('contato/', views.f_contato, name='contato'),
+    path('produto/<int:pk>', views.produto, name='produto'),
+    path('cliente/<int:pk>', views.f_cliente, name='cliente'),
 ]

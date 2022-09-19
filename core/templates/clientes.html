@@ -1,30 +1,35 @@
+from core.models import Cliente
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Django - Produtos</title>
+    <title>Django - Clientes</title>
 </head>
 <body>
     <center>
-        <h1>Produtos</h1>
+        <h1>I n d e x</h1>
     </center>    
     <table>
         <thead>
             <tr>
-                <th>Produto</th>
-                <th>Preço</th>
-                <th>Estoque</th>
+                <th>Nome</th>
+                <th>Endereço</th>
+                <th>Email</th>
             </tr>
         </thead>
         <tbody>
+        {% for cliente in Clientes %}
             <tr>
-                <td>{{ nome }}</td>
-                <td>{{ preco }}</td>
-                <td>{{ quantidade }}</td>
+                <td>{{ cliente.nome }}</td>
+                <td>{{ cliente.preco }}</td>
+                <td>{{ cliente.estoque }}</td>
             </tr>
-        </tbody>
+        {% endfor %}
+        <tbody>
     </table>    
 </body>
 </html>

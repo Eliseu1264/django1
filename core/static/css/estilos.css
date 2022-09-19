@@ -1,0 +1,13 @@
+body {
+    background:rgb(0, 139, 127);
+    color:aliceblue
+}
+
+table {
+    color: rgb(224, 226, 95);
+}   
+
+a {
+    text-decoration: none;
+    color: rgb(224, 226, 95);
+}
