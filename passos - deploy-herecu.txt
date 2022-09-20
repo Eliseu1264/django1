@@ -73,6 +73,7 @@ MIDDLEWARE = [
 => Ao alterar o projeto. Atualizar git e heroku:
    git add .
    git commit -m "mensagem"
+   git push origin
 
    git push heroku master
 ----------------------------------------------------------------------------
