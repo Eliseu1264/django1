@@ -51,6 +51,7 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 Passos_projeto_python_django.txt
+__pycache__
 *.*~
 *.pyc
 .idea
