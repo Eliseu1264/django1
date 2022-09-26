@@ -20,7 +20,7 @@
             <tr>
                 <th>Produto</th>
                 <th>Preço</th>
-                <th>Estoque</th>
+                <th>      Estoque</th>
             </tr>
         </thead>
         <tbody>
@@ -28,7 +28,7 @@
             <tr>
                 <td><a href="{% url 'produto' produto.id %}">{{ produto.nome }}</a></td>
                 <td>{{ produto.preco }}</td>
-                <td>{{ produto.quantidade }}</td>
+                <td>      {{ produto.quantidade }}</td>
             </tr>
         {% endfor %}
         <tbody>
