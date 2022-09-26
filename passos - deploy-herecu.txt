@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------
-=> Se ainda não existir, criar na raiz do projeto, o arquivo "gitignore"
+=> Se ainda não existir, criar na raiz do projeto, o arquivo ".gitignore"
    e colocar ou acrescentar nele o seguinte:
 
 __pycache__
@@ -70,12 +70,20 @@ MIDDLEWARE = [
    coloca-se entre os parêntese. por Exemplo o site "https://django1-assist.heroku.com"
    ALLOWED HOSTS = ['django1-assist.heroku.com']
 ----------------------------------------------------------------------------
-=> Ao alterar o projeto. Atualizar git e heroku:
+=> Para atualizar/alterar o projeto no git e heroku:
    git add .
    git commit -m "mensagem"
-   git push origin
 
    git push heroku master
+----------------------------------------------------------------------------
+>> Criar a aplicação no heroku:
+   heroku create django1-assist --buildpack heroku/python
+----------------------------------------------------------------------------
+>> Publicar/enviar a aplicação no heroku:
+   git push heroku master
+----------------------------------------------------------------------------
+=> Executar a migração (para PostegreSQL, por exemplo.)
+   heroku run py manage.py migrate
 ----------------------------------------------------------------------------
 => Para ver algum erro, quando houver, no deploy:
    heroku logs --tail
